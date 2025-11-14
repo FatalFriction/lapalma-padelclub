@@ -154,7 +154,7 @@ body::-webkit-scrollbar {
   height: 170px;
   margin-top: 20px;
   margin-bottom: 30px;
-  background-image: url('https://fatalfriction.github.io/lapalma-padelclub/img8.jpg');
+  background-image: url('https://fatalfriction.github.io/lapalma-padelclub/public/img8.jpg');
   background-size: cover;
   background-position: center;
 }

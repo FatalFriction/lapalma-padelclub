@@ -7,7 +7,7 @@ import CardSwap, { Card } from "@/components/CardSwap";
 export default function Courts() {
   return (
     <section id="courts" className="justify-center text-white">
-      <div id="courts-section" className="flex flex-row justify-center items-center w-full h-[150vh] mx-auto px-8 bg-[url('https://fatalfriction.github.io/lapalma-padelclub/courtyard.jpg')] bg-cover bg-top">
+      <div id="courts-section" className="flex flex-row justify-center items-center w-full h-[150vh] mx-auto px-8 bg-[url('https://fatalfriction.github.io/lapalma-padelclub/public/courtyard.jpg')] bg-cover bg-top">
         
         <section className="headline-wrapper mx-auto">
           <div className="text-center flex flex-col items-center">
@@ -39,7 +39,7 @@ export default function Courts() {
                 title=" Indoor Premium Court"
                 description="Climate-controlled for consistent play with premium turf and
                   professional-grade lighting."
-                image="https://fatalfriction.github.io/lapalma-padelclub/court/img6.jpg"
+                image="https://fatalfriction.github.io/lapalma-padelclub/public/court/img6.jpg"
               />
             </Card>
             <Card>
@@ -47,14 +47,14 @@ export default function Courts() {
                 title="Golden Sunset Court"
                 description="Play under the open sky with golden-hour lighting for a
                   calming, unforgettable padel experience."
-                image="https://fatalfriction.github.io/lapalma-padelclub/court/img17.jpg"
+                image="https://fatalfriction.github.io/lapalma-padelclub/public/court/img17.jpg"
               />
             </Card>
             <Card>
               <CourtCard
                 title="International Standart Court"
                 description="Inspired by pro arenas — fast turf, premium nets, and stadium-style side lighting."
-                image="https://fatalfriction.github.io/lapalma-padelclub/court/img19.jpg"
+                image="https://fatalfriction.github.io/lapalma-padelclub/public/court/img19.jpg"
               />
             </Card>
           </CardSwap>
