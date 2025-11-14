@@ -1,36 +1,165 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🟢 README.md — La Palma Padel Club Website
+<br> <div align="center"> <img src="https://img.shields.io/badge/Next.js-14-black?logo=next.js" /> <img src="https://img.shields.io/badge/GSAP-3-88CE02?logo=greensock" /> <img src="https://img.shields.io/badge/TailwindCSS-3-38BDF8?logo=tailwind-css" /> <img src="https://img.shields.io/badge/Lenis-Smooth%20Scroll-orange" /> <img src="https://img.shields.io/badge/Status-In%20Development-yellow" /> </div> <br>
+🎾 La Palma Padel Club — Official Website
 
-## Getting Started
+A premium front-end website experience designed for La Palma Padel Club, combining elegant visuals, fluid scrolling interactions, and immersive sport-focused storytelling.
 
-First, run the development server:
+This project uses Next.js, GSAP, and Lenis to create a high-end, modern digital identity for a padel sports club.
 
-```bash
+✨ Features
+🎥 Interactive GSAP Scroll Slider
+
+Dynamic scroll-controlled transitions
+
+Smooth fade + scale animations
+
+Preloaded images for zero flicker
+
+Automatic indicator & title animation
+
+Built for performance and smooth GPU handling
+
+🌀 Lenis Smooth Scrolling
+
+Ultra-smooth kinetic scrolling
+
+Seamless integration with ScrollTrigger
+
+Zero jitter or native scroll jump
+
+🎨 Premium UI / UX
+
+Luxury sport-style typography
+
+Neon accents, soft shadows, gradient highlights
+
+Clean layout, fully responsive
+
+⚡ Optimized Performance
+
+Lazy loaded sections
+
+Parallel image preloading
+
+requestIdleCallback for smooth execution
+
+Reusable GSAP timeline patterns
+
+🛠 Tech Stack
+Category	Technology
+Framework	Next.js 14 / App Router
+Animation	GSAP (ScrollTrigger + SplitText)
+Smooth Scroll	Lenis
+Styling	TailwindCSS + Custom CSS
+Image Optimization	Custom Preloader + Next.js assets
+Build Tooling	TypeScript, SWC, PostCSS
+📂 Project Structure
+src/
+  components/
+    ScrollSlider/
+      ScrollSlider.tsx
+      ScrollSlider.css
+    outro/
+      outro.tsx
+  const/
+    slides.ts
+  app/
+    page.tsx
+    layout.tsx
+  public/
+    img/
+      img1.jpg
+      img2.jpg
+      ...
+
+🚀 Getting Started
+1. Clone the repository
+git clone https://github.com/your-name/la-palma-padel.git
+cd la-palma-padel
+
+2. Install dependencies
+npm install
+
+
+or
+
+yarn
+
+3. Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Your site will be available at:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+👉 http://localhost:3000
 
-## Learn More
+📸 Adding Slider Images
 
-To learn more about Next.js, take a look at the following resources:
+Images should be placed in:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+public/img/
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+And referenced in your slides.ts:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+export const slides = [
+  { title: "Fast rallies. Full control.", image: "/img/img1.jpg" },
+  ...
+];
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🔄 Auto-Updating Footer Year
+
+Your footer includes:
+
+© {new Date().getFullYear()} La Palma Padel Club. All Rights Reserved.
+
+
+This automatically updates the year without maintenance.
+
+🧠 Core Components
+⭐ ScrollSlider
+
+Main parallax / scroll-triggered slider:
+
+Parallel image preloader
+
+Title SplitText animation
+
+Dynamic index marker animation
+
+Smooth GSAP transitions
+
+⭐ Outro
+
+Closing section fading in after the slider.
+
+🧪 Running Production Build
+npm run build
+npm start
+
+📦 Deployment
+
+Fully compatible with:
+
+Vercel (recommended)
+
+Netlify
+
+Cloudflare Pages
+
+Static export (limited GSAP usage)
+
+🤝 Contributing
+
+PRs, issues, and enhancements are welcome!
+Feel free to submit feature ideas or report bugs.
+
+📜 License
+
+This project is licensed under the MIT License.
+You are free to modify or reuse with attribution.
+
+🔥 Credits
+
+Design & Development:
+La Palma Padel Club × Matrix™
