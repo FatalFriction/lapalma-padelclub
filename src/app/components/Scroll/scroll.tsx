@@ -9,36 +9,9 @@ import { slides as originalSlides } from "@/const/slides";
 import "./ScrollSlider.css";
 import Outro from "../outro/outro";
 
-// ----------------------------------------------------------------------------------
-// Preload Helper (fixed for Next.js – uses window.Image)
-// ----------------------------------------------------------------------------------
-function preloadImages(urls: string[]): Promise<void[]> {
-  return new Promise((resolve) => {
-    if (typeof window === "undefined") return resolve([]); // SSR safety
-
-    const preloadSingle = (src: string) =>
-      new Promise<void>((res) => {
-        const img = new Image();
-        img.decoding = "async";
-        img.loading = "eager";
-        img.fetchPriority = "high";
-        img.src = src;
-        img.onload = () => res();
-        img.onerror = () => res();
-      });
-
-    if ("requestIdleCallback" in window) {
-      requestIdleCallback(() => resolve(Promise.all(urls.map(preloadSingle))));
-    } else {
-      resolve(Promise.all(urls.map(preloadSingle)));
-    }
-  });
-}
-
 const ScrollSlider: React.FC = () => {
   const sliderRef = useRef<HTMLDivElement>(null);
 
-  // Randomize & slice if > 20
   const slides =
     originalSlides.length > 20
       ? [...originalSlides].sort(() => Math.random() - 0.5).slice(0, 10)
@@ -49,9 +22,6 @@ const ScrollSlider: React.FC = () => {
 
     gsap.registerPlugin(ScrollTrigger, SplitText);
     
-    // -------------------------------------------------------
-    // LENIS Smooth Scroll
-    // -------------------------------------------------------
     const lenis = new Lenis({ smoothWheel: true });
     lenis.on("scroll", ScrollTrigger.update);
     gsap.ticker.add((time) => lenis.raf(time * 1000));
@@ -78,9 +48,6 @@ const ScrollSlider: React.FC = () => {
 
     const pinDistance = window.innerHeight * slides.length;
 
-    // -------------------------------------------------------
-    // Create Slide Indices (Numbers)
-    // -------------------------------------------------------
     function createIndices() {
       sliderIndices.innerHTML = "";
 
@@ -107,9 +74,6 @@ const ScrollSlider: React.FC = () => {
       });
     }
 
-    // -------------------------------------------------------
-    // Title Animation
-    // -------------------------------------------------------
     function animateNewTitle(index: number) {
       if (currentSplit) currentSplit.revert();
 
@@ -136,9 +100,6 @@ const ScrollSlider: React.FC = () => {
       });
     }
 
-    // -------------------------------------------------------
-    // Indicators Animation
-    // -------------------------------------------------------
     function animateIndicators(index: number) {
       const indicators = sliderIndices.querySelectorAll("p");
 
@@ -156,12 +117,7 @@ const ScrollSlider: React.FC = () => {
       });
     }
 
-    // -------------------------------------------------------
-    // Slide Image Animation (with Preload Fix)
-    // -------------------------------------------------------
     async function animateNewSlide(index: number) {
-      await preloadImages([slides[0].image]);
-
       const newImg = document.createElement("img");
       newImg.src = `${slides[index].image}?w=1600&q=85`;
       newImg.alt = `slide ${index + 1}`;
@@ -169,11 +125,9 @@ const ScrollSlider: React.FC = () => {
       gsap.set(newImg, { opacity: 0, scale: 1.1 });
       sliderImages.appendChild(newImg);
 
-      // fade in + scale animation
       gsap.to(newImg, { opacity: 1, duration: 0.5, ease: "power2.out" });
       gsap.to(newImg, { scale: 1, duration: 1, ease: "power2.out" });
 
-      // Cleanup older images, keep last 3
       const allImages = Array.from(sliderImages.querySelectorAll("img"));
 
       if (allImages.length > 3) {
@@ -181,7 +135,7 @@ const ScrollSlider: React.FC = () => {
         for (let i = 0; i < removeCount; i++) {
           const img = allImages[i];
           if (img && img.parentNode === sliderImages) {
-            img.remove(); // SAFE ✔
+            img.remove();
           }
         }
       }
@@ -190,9 +144,6 @@ const ScrollSlider: React.FC = () => {
       animateIndicators(index);
     }
 
-    // -------------------------------------------------------
-    // Init
-    // -------------------------------------------------------
     createIndices();
     animateNewSlide(0);
 
