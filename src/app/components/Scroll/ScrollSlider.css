@@ -40,7 +40,6 @@ img {
   transition: filter 0.5s ease;
 }
 
-
 .slider-images::after {
     content: "";
     position: absolute;
@@ -179,4 +178,38 @@ img {
 
 .cards-container {
     padding: 30px;
+}
+
+/* Mobile (<=640px) */
+@media (max-width: 640px) {
+  .cards-container {
+    padding: 20px;
+  }
+
+  .outro-wrapper {
+    padding-top: 7rem;
+  }
+
+  .outro h1 {
+    width: 100%;
+
+  }
+
+  .slider-title {
+    left: 1rem;
+    font-size: 40px;
+  }
+
+  .slider-title::after {
+  width: 150px;
+  height: 4px;
+ }
+}
+
+/* Extra Small Mobile (<=480px) */
+@media (max-width: 480px) {
+  .slider-title {
+    width: 70%;
+    left: 0.8rem;
+  }
 }

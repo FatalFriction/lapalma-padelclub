@@ -113,9 +113,10 @@ export default function Footer() {
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} La Palma Padel Club. All Rights Reserved.</p>
         <p className="powered">
-          Crafted with passion — powered by <span>Matrix™</span>
+          Crafted with passion — powered by <span className="text-[#d7f04bde]">Matrix™</span>
         </p>
       </div>
+      <p className="built-by">© Built by Michael Florentio</p>
     </footer>
   );
 }

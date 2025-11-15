@@ -1,58 +1,124 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { CourtCard } from "../card/card";
 import CardSwap, { Card } from "@/components/CardSwap";
 
 export default function Courts() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreen = () => setIsMobile(window.innerWidth <= 1024);
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
+
   return (
     <section id="courts" className="justify-center text-white">
-      <div id="courts-section" className="flex flex-row justify-center items-center w-full h-[150vh] mx-auto px-8 bg-[url('https://fatalfriction.github.io/lapalma-padelclub/public/courtyard.jpg')] bg-cover bg-top">
+      <div
+        id="courts-section"
+        className="
+          flex w-full mx-auto px-8 
+          bg-[url('https://fatalfriction.github.io/lapalma-padelclub/public/courtyard.jpg')] 
+          bg-cover bg-top 
+          items-center 
+          justify-center
+          h-[150vh]
+          max-lg:flex-col
+          max-lg:py-24 
+          max-lg:gap-16
+        "
+      >
         
-        <section className="headline-wrapper mx-auto">
-          <div className="text-center flex flex-col items-center">
-            <h1 id="court-h1" className="text-[8rem] drop-shadow-[0_15px_45px_rgba(0,0,0,0.5)] ">
-              Our Courts
-            </h1>
+        <section className="
+            headline-wrapper mx-auto 
+            text-center flex flex-col items-center
+          "
+        >
+          <h1
+            id="court-h1"
+            className="
+              drop-shadow-[0_15px_45px_rgba(0,0,0,0.5)]
+              text-[8rem]
+              max-lg:text-[6rem]
+              max-md:text-[4rem]
+              max-sm:text-[3rem]
+            "
+          >
+            Our Courts
+          </h1>
 
-            <p className="text-[40px] mx-auto drop-shadow-[0_8px_25px_rgba(0,0,0,0.6)]">
-              Designed for comfort, <br/> crafted for precision experience<br/> 
-              <span className="high-wrapper text-[#d7f04bde] text-[155px]">padel</span> 
-              
-              <br/>
-              play in a space where <br/> luxury meets performance.
-            </p>
-          </div>
+          <p
+            className="
+              drop-shadow-[0_8px_25px_rgba(0,0,0,0.6)]
+              text-[40px]
+              max-lg:text-[32px]
+              max-md:text-[26px]
+              max-sm:text-[22px]
+              leading-tight
+            "
+          >
+            Designed for comfort,
+            <br /> crafted for precision experience
+            <br />
+            <span
+              className="
+                high-wrapper
+                text-[#d7f04bde]
+                text-[155px]
+                max-lg:text-[120px]
+                max-md:text-[90px]
+                max-sm:text-[70px]
+              "
+            >
+              padel
+            </span>
+            <br />
+            play in a space where
+            <br /> luxury meets performance.
+          </p>
         </section>
 
-
-        <div style={{position: "relative", width: "750px"}}>
+        {/* ---------- CARD SECTION ---------- */}
+        <div
+          className="
+            relative
+            max-lg:flex 
+            max-lg:justify-center
+            max-lg:px-6
+          "
+          style={{
+            width: isMobile ? "125px" : "750px",
+            height: isMobile ? "250px" : "",
+          }}
+        >
           <CardSwap
-            cardDistance={40}
-            verticalDistance={70}
-            delay={5000}
-            pauseOnHover={false}
+            cardDistance={isMobile ? 10 : 40}
+            verticalDistance={isMobile ? 10 : 70}
+            delay={4500}
+            pauseOnHover={!isMobile}
             easing="elastic"
           >
             <Card>
               <CourtCard
-                title=" Indoor Premium Court"
-                description="Climate-controlled for consistent play with premium turf and
-                  professional-grade lighting."
+                title="Indoor Premium Court"
+                description="Climate-controlled for consistent play with premium turf and professional lighting."
                 image="https://fatalfriction.github.io/lapalma-padelclub/public/court/img6.jpg"
               />
             </Card>
+
             <Card>
               <CourtCard
                 title="Golden Sunset Court"
-                description="Play under the open sky with golden-hour lighting for a
-                  calming, unforgettable padel experience."
+                description="Play under the sky with golden-hour lighting for a calm, unforgettable padel experience."
                 image="https://fatalfriction.github.io/lapalma-padelclub/public/court/img17.jpg"
               />
             </Card>
+
             <Card>
               <CourtCard
-                title="International Standart Court"
+                title="International Standard Court"
                 description="Inspired by pro arenas — fast turf, premium nets, and stadium-style side lighting."
                 image="https://fatalfriction.github.io/lapalma-padelclub/public/court/img19.jpg"
               />

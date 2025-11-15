@@ -6,6 +6,7 @@ import Shery from "sheryjs";
 
 export default function Hero() {
   const heroRef = useRef<HTMLDivElement>(null);
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
 
   useEffect(() => {
     Shery.imageEffect("#back", {
@@ -91,21 +92,23 @@ export default function Hero() {
         <button>Explore Now</button>
       </div>
 
-      <div id="heroright">
-        <p>
-          "Where precision meets peace — a padel sanctuary crafted for players who appreciate calm, grace, and quiet excellence."
-        </p>
+      {!isMobile && (
+        <div id="heroright">
+          <p>
+            "Where precision meets peace — a padel sanctuary crafted for players who appreciate calm, grace, and quiet excellence."
+          </p>
 
-        <div id="imagediv"></div>
+          <div id="imagediv"></div>
 
-        <p>
-          "Our courts are designed to soothe your senses — soft lighting, gentle acoustics, and a space that elevates every rally into an experience.
-        </p>
+          <p>
+            "Our courts are designed to soothe your senses — soft lighting, gentle acoustics, and a space that elevates every rally into an experience.
+          </p>
 
-        <p>
-          "Play without pressure, unwind with intention, and enjoy the gentle luxury of a club built to bring joy into every swing.
-        </p>
-      </div>
+          <p>
+            "Play without pressure, unwind with intention, and enjoy the gentle luxury of a club built to bring joy into every swing.
+          </p>
+        </div>
+      )}
     </div>
   );
 }
