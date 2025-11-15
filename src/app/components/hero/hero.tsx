@@ -1,12 +1,16 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import Shery from "sheryjs";
 
 export default function Hero() {
   const heroRef = useRef<HTMLDivElement>(null);
-  const isMobile = typeof window !== "undefined" && window.innerWidth < 1024;
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+  setIsMobile(window.innerWidth < 1024);
+  }, []);
 
   useEffect(() => {
     Shery.imageEffect("#back", {

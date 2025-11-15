@@ -5,8 +5,8 @@ import React from "react";
 export default function Background() {
   return (
     <div id="back">
-      <img src="https://fatalfriction.github.io/lapalma-padelclub/public/img18.jpg" alt="Lapalma Padel Club BSD Court" />
-      <img src="https://fatalfriction.github.io/lapalma-padelclub/public/img1.jpg" alt="Lapalma Padel Club BSD Lounge" />
+      <img src="/img18.jpg" alt="Lapalma Padel Club BSD Court" />
+      <img src="/img1.jpg" alt="Lapalma Padel Club BSD Lounge" />
     </div>
   );
 }

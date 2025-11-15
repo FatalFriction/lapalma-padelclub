@@ -20,7 +20,7 @@ export default function Courts() {
         id="courts-section"
         className="
           flex w-full mx-auto px-8 
-          bg-[url('https://fatalfriction.github.io/lapalma-padelclub/public/courtyard.jpg')] 
+          bg-[url('/courtyard.jpg')] 
           bg-cover bg-top 
           items-center 
           justify-center
@@ -104,7 +104,7 @@ export default function Courts() {
               <CourtCard
                 title="Indoor Premium Court"
                 description="Climate-controlled for consistent play with premium turf and professional lighting."
-                image="https://fatalfriction.github.io/lapalma-padelclub/public/court/img6.jpg"
+                image="/court/img6.jpg"
               />
             </Card>
 
@@ -112,7 +112,7 @@ export default function Courts() {
               <CourtCard
                 title="Golden Sunset Court"
                 description="Play under the sky with golden-hour lighting for a calm, unforgettable padel experience."
-                image="https://fatalfriction.github.io/lapalma-padelclub/public/court/img17.jpg"
+                image="/court/img17.jpg"
               />
             </Card>
 
@@ -120,7 +120,7 @@ export default function Courts() {
               <CourtCard
                 title="International Standard Court"
                 description="Inspired by pro arenas — fast turf, premium nets, and stadium-style side lighting."
-                image="https://fatalfriction.github.io/lapalma-padelclub/public/court/img19.jpg"
+                image="/court/img19.jpg"
               />
             </Card>
           </CardSwap>
