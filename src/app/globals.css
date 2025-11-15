@@ -9,6 +9,7 @@
 
 @font-face {
   font-family: heavitas;
+  font-display: swap;
   src: url("/font/Heavitas.ttf");
 }
 
