@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import Shery from "sheryjs";
+import './hero.css'
 
 export default function Hero() {
   const heroRef = useRef<HTMLDivElement>(null);

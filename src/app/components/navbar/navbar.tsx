@@ -3,6 +3,7 @@
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/all";
 import { useEffect, useRef, useState } from "react";
+import './nav.css'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -70,7 +71,7 @@ export default function Navbar() {
     >
       {isMobile ? (
         <>
-          <img src="/logo.png" alt="logo" />
+          <img src="/logo.webp" alt="logo" />
 
           <button className="hamburger-btn mr-4" onClick={toggleMenu}>
             <div className={`line ${open ? "line1-open" : ""}`} />
@@ -88,7 +89,7 @@ export default function Navbar() {
       ) : (
         <>
           <div id="nav-left">
-            <img src="/logo.png" alt="logo" />
+            <img src="/logo.webp" alt="logo" />
             <button className="nav-link" onClick={() => scrollToSection("main")}>
               <a>Club</a>
             </button>

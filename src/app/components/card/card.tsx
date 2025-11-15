@@ -4,6 +4,8 @@ interface CourtCardProps {
   image: string;
 }
 
+import './cards.css'
+
 export function CourtCard({ title, description, image }: CourtCardProps) {
   return (
     <div

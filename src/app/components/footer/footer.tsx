@@ -1,6 +1,4 @@
-"use client";
-
-import React from "react";
+import Image from "next/image";
 import "./footer.css";
 
 export default function Footer() {
@@ -8,7 +6,16 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-top">
         <div className="footer-brand">
-          <img src="/bw.png" alt="logo" className="footer-logo" />
+          <Image
+            src="/bw.webp"
+            alt="La Palma Padel Club Logo"
+            width={140}
+            height={140}
+            quality={90}
+            priority={false}
+            className="footer-logo mb-4"
+          />
+
           <p className="tagline">Where energy meets elegance.</p>
         </div>
 
@@ -29,25 +36,31 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://wa.me/6287788832383"
+                <a
+                  href="https://wa.me/6287788832383"
                   target="_blank"
-                  rel="noopener noreferrer">Events</a>
+                  rel="noopener noreferrer"
+                >
+                  Events
+                </a>
               </li>
               <li>
-                <a href="https://wa.me/6287788832383"
+                <a
+                  href="https://wa.me/6287788832383"
                   target="_blank"
-                  rel="noopener noreferrer">Coaching</a>
+                  rel="noopener noreferrer"
+                >
+                  Coaching
+                </a>
               </li>
             </ul>
           </div>
-
           <div className="footer-column">
             <h3>Explore</h3>
             <ul>
               <li>
                 <a href="#about-section">About Us</a>
               </li>
-
               <li>
                 <a
                   href="https://ayo.co.id/v/lapalma-padel-club-bsd"
@@ -57,7 +70,6 @@ export default function Footer() {
                   Bookings
                 </a>
               </li>
-
               <li>
                 <a href="#facilities-section">Facilities</a>
               </li>
@@ -66,7 +78,6 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
           <div className="footer-column">
             <h3>Contact</h3>
             <ul>
@@ -79,7 +90,6 @@ export default function Footer() {
                   WhatsApp
                 </a>
               </li>
-
               <li>
                 <a
                   href="https://instagram.com/lapalma.padel"
@@ -89,11 +99,9 @@ export default function Footer() {
                   Instagram
                 </a>
               </li>
-
               <li>
                 <a href="mailto:hello@lapalmapadel.com">Email</a>
               </li>
-
               <li>
                 <a
                   href="https://share.google/XYpNfV69JtsCjjJR5"
@@ -108,14 +116,18 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="footer-divider"/>
+      <div className="footer-divider" />
 
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} La Palma Padel Club. All Rights Reserved.</p>
+        <p>
+          © {new Date().getFullYear()} La Palma Padel Club. All Rights Reserved.
+        </p>
         <p className="powered">
-          Crafted with passion — powered by <span className="text-[#d7f04bde]">Matrix™</span>
+          Crafted with passion — powered by{" "}
+          <span className="text-[#d7f04bde]">Matrix™</span>
         </p>
       </div>
+
       <p className="built-by">© Built by Michael Florentio</p>
     </footer>
   );

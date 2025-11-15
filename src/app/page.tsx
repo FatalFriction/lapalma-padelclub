@@ -5,6 +5,7 @@ import Background from "./components/background/background";
 import Courts from "./components/court/court";
 import ScrollSlider from "./components/Scroll/scroll";
 import dynamic from "next/dynamic";
+import './components/page/page.css'
 
 const Hero = dynamic(() => import("../../src/app/components/hero/hero"), {
   ssr: false,

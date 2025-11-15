@@ -1,15 +1,29 @@
-import React from "react";
 import "../Scroll/ScrollSlider.css";
-import {policies} from '../../../const/rules'
+import { policies } from "../../../const/rules";
+import Image from "next/image";
 
 const Outro = () => {
   return (
-    <div id="outro-wrapper" className="container outro-wrapper max-w-full py-24 flex flex-col items-center gap-10 relative text-white">
-    <div className="absolute blur-[3px] inset-0 bg-[url('/court.jpg')] bg-cover bg-center -scale-x-100"/>
+    <div
+      id="outro-wrapper"
+      className="container outro-wrapper max-w-full py-24 flex flex-col items-center gap-10 relative text-white"
+    >
+      <div className="absolute inset-0 -scale-x-100 overflow-hidden">
+        <Image
+          src="/court.webp"
+          alt="Court Background"
+          fill
+          quality={90}
+          className="object-cover object-center blur-[3px]"
+          priority={false}
+        />
+      </div>
 
       <section className="outro">
         <h1 className="lg:text-6xl font-bold drop-shadow-xl ">
-          New court, new vibes, same fun energy.<br />Let’s padel it up!
+          New court, new vibes, same fun energy.
+          <br />
+          Let’s padel it up!
         </h1>
       </section>
 

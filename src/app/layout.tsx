@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: "LaPalma Padel Club",
   description: "LaPalma Padel Club by Matrix at BSD",
   icons: {
-    icon: "/logo.png",
+    icon: "/logo.webp",
   },
 };
 

@@ -9,6 +9,9 @@ const nextConfig: NextConfig = {
     });
     return config;
   },
+  images: {
+    qualities: [25, 50, 75, 90],
+  },
 };
 
 export default nextConfig;
