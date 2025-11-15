@@ -6,7 +6,7 @@ import Shery from "sheryjs";
 
 export default function Hero() {
   const heroRef = useRef<HTMLDivElement>(null);
-  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 1024;
 
   useEffect(() => {
     Shery.imageEffect("#back", {
