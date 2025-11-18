@@ -100,7 +100,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:hello@lapalmapadel.com">Email</a>
+                <a href="mailto:lapalmapadelbsd@gmail.com">Email</a>
               </li>
               <li>
                 <a
@@ -120,7 +120,8 @@ export default function Footer() {
 
       <div className="footer-bottom">
         <p>
-          © {new Date().getFullYear()} La Palma Padel Club. All Rights Reserved.
+          © {new Date().getFullYear()} PT Lapalma Sehat Sejahtera. All Rights Reserved.<p>
+        </p>
         </p>
         <p className="powered">
           Crafted with passion — powered by{" "}
