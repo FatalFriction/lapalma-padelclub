@@ -120,8 +120,7 @@ export default function Footer() {
 
       <div className="footer-bottom">
         <p>
-          © {new Date().getFullYear()} PT Lapalma Sehat Sejahtera. All Rights Reserved.<p>
-        </p>
+          © {new Date().getFullYear()} PT Lapalma Sehat Sejahtera. All Rights Reserved.
         </p>
         <p className="powered">
           Crafted with passion — powered by{" "}

@@ -65,8 +65,7 @@ export default function Navbar() {
       className="
         fixed top-0 left-0 w-full z-50
         flex justify-between items-center
-        backdrop-blur-xl bg-[#d7f04bde]/70
-        border-b border-white/10
+        backdrop-blur-xl bg-[#F5F1EA]
       "
     >
       {isMobile ? (

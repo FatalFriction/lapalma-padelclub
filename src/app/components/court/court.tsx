@@ -29,7 +29,7 @@ export default function Courts() {
               overflow-hidden
               max-lg:flex-col
               max-lg:py-24
-              max-lg:gap-16
+              max-lg:gap-17
             "
                 >
         <Image
@@ -90,7 +90,6 @@ export default function Courts() {
           </p>
         </section>
 
-        {/* ---------- CARD SECTION ---------- */}
         <div
           className="
       relative
@@ -99,13 +98,13 @@ export default function Courts() {
       max-lg:px-6
     "
           style={{
-            width: isMobile ? "125px" : "750px",
+            width: isMobile ? "125px" : "550px",
             height: isMobile ? "250px" : "",
           }}
         >
           <CardSwap
-            cardDistance={isMobile ? 10 : 40}
-            verticalDistance={isMobile ? 10 : 70}
+            cardDistance={isMobile ? 10 : 0}
+            verticalDistance={isMobile ? 10 : 0}
             delay={4500}
             pauseOnHover={!isMobile}
             easing="elastic"

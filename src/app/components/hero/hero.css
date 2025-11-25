@@ -10,10 +10,6 @@
     display: flex;
     margin-top: 30px;
     justify-content: space-between;
-    -webkit-transform: translate(0%, -50%);
-    -moz-transform: translate(0%, -50%);
-    -ms-transform: translate(0%, -50%);
-    -o-transform: translate(0%, -50%);
 }
 
 #heroleft {
@@ -22,8 +18,10 @@
 
 #heroleft .elem {
     position: relative;
-    height: 9vw;
+    height: 13vw;
     overflow: hidden;
+    pointer-events: none;
+    user-select: none;
 }
 
 #heroleft .elem h1:nth-child(1) {
@@ -34,20 +32,44 @@
     position: absolute;
     top: 100%;
     left: 0;
-    line-height: 0.92;
     font-family: "heavitas";
     color: #fff;
     font-weight: 100;
     font-size: 5vw;
 }
 
-#heroleft button {
-    @apply appearance-none bg-transparent border-0 p-0 m-0 cursor-pointer outline-none;
-    padding: 0.8vw 3vw;
-    font-size: 3vw;
-    margin-top: 2vw;
+.cta-wrapper a {
+    display: block;
+    padding: 0.9vw 2.8vw;
+    color: black;
+    font-size: 2vw;
     font-family: "heavitas";
+}
+
+.cta-wrapper {
+    clip-path: polygon(8% 0%,
+            100% 0%,
+            92% 100%,
+            0% 100%);
     background-color: #fff;
+    display: inline-block;
+
+    z-index: 99;
+    pointer-events: all;
+    user-select: none;
+}
+
+.cta-wrapper:hover {
+    background-color: #811105;
+}
+
+.cta-wrapper:hover a {
+    color: white;
+}
+
+.cta-wrapper,
+.cta-wrapper a {
+    transition: all 0.25s ease;
 }
 
 #heroright {
@@ -56,6 +78,8 @@
     align-items: flex-end;
     width: 17%;
     color: #fff;
+    pointer-events: none;
+    user-select: none;
 }
 
 #heroright p {
@@ -69,9 +93,6 @@
     height: 170px;
     margin-top: 20px;
     margin-bottom: 30px;
-    background-image: url('/img8.webp');
-    background-size: cover;
-    background-position: center;
 }
 
 #heroright p:nth-child(3) {
@@ -83,10 +104,30 @@
         display: block;
     }
 
+    #heroright {
+        display: none;
+    }
+
+    #heroleft {
+        min-width: 100%;
+    }
+
+    #heroleft .elem {
+    position: relative;
+    height: 28vw;
+    overflow: hidden;
+    pointer-events: none;
+    user-select: none;
+    }
+
     #heroleft .elem h1 {
-        line-height: 1.2;
         font-weight: 100;
-        font-size: 8vw;
+        font-size: 10vw;
+    }
+
+    .cta-wrapper a {
+        padding: 1.4vw 3.5vw;
+        font-size: 3.5vw;
     }
 }
 
@@ -97,5 +138,10 @@
         margin-top: 5vw;
         font-family: "heavitas";
         background-color: #fff;
+    }
+
+    .cta-wrapper a {
+        padding: 3vw 6vw;
+        font-size: 5vw;
     }
 }

@@ -1,6 +1,8 @@
 #back {
   width: 100%;
   height: 110vh;
+  pointer-events: none;
+  user-select: none;
 }
 
 #back img {
