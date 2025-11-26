@@ -34,15 +34,15 @@ const Outro = () => {
           return (
             <div
               key={index}
-              className="cards-container max-w-88 xl:max-w-full flex justify-center items-center bg-[#d7f04bde]/10 backdrop-blur-lg rounded-xl shadow-md gap-4 h-40 lg:h-32"
+              className="cards-container max-w-88 xl:max-w-full flex justify-center items-center bg-[#7c1101de]/10 backdrop-blur-lg rounded-xl shadow-md gap-4 h-40 lg:h-32"
             >
-              <Icon className="w-8 h-8 lg:w-10 lg:h-10 text-[#d7f04bde] shrink-0 mx-auto" />
+              <Icon className="w-8 h-8 lg:w-10 lg:h-10 text-[#f5f1ea] shrink-0 mx-auto" />
 
               <div>
-                <h3 className="text-xl lg:text-2xl font-semibold mb-2 text-[#d7f04bde]">
+                <h3 className="text-xl lg:text-2xl font-semibold mb-2 text-[#f5f1ea]">
                   {item.title}
                 </h3>
-                <p className="opacity-80 leading-relaxed text-[15px] lg:text-[17px]">
+                <p className="leading-relaxed text-[15px] lg:text-[17px] text-[#f5f1ea]">
                   {item.desc}
                 </p>
               </div>

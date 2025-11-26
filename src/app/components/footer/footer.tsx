@@ -124,7 +124,7 @@ export default function Footer() {
         </p>
         <p className="powered">
           Crafted with passion — powered by{" "}
-          <span className="text-[#d7f04bde]">Matrix™</span>
+          <span className="text-[#f5f1ea]">Matrix™</span>
         </p>
       </div>
 

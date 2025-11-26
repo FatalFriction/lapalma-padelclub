@@ -66,7 +66,7 @@ img {
   left: 0;
   width: 380px;
   height: 4px;
-  background: #d7f04bde;
+  background: #7c1101de;
   transform: skewX(-20deg);
   z-index: 1;
 }
@@ -181,7 +181,6 @@ img {
     padding: 30px;
 }
 
-/* Mobile (<=640px) */
 @media (max-width: 640px) {
   .cards-container {
     padding: 20px;
@@ -207,7 +206,6 @@ img {
  }
 }
 
-/* Extra Small Mobile (<=480px) */
 @media (max-width: 480px) {
   .slider-title {
     width: 70%;

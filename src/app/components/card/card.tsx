@@ -20,7 +20,7 @@ export function CourtCard({ title, description, image }: CourtCardProps) {
       />
 
       <div className="space-y-2 relative">
-        <h3 className="text-4xl text-[#d7f04bde] highs-wrappers">
+        <h3 className="text-4xl text-[#7c1101de] highs-wrappers">
           {title}
         </h3>
 

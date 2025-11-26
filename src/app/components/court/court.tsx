@@ -75,7 +75,7 @@ export default function Courts() {
             <span
               className="
           high-wrapper
-          text-[#d7f04bde]
+          text-[#7c1101de]
           text-[155px]
           max-lg:text-[120px]
           max-md:text-[90px]
